@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government & Leadership - The People's Republic of Austria and Slovenia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0f29, #1a237e);
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            display: flex;
+        }
+        .sidebar {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .sidebar a {
+            color: #ffcc00;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            flex: 3;
+        }
+        h1, h2 {
+            color: #ffcc00; /* Headings color */
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s;
+            text-align: left;
+        }
+        .section-title {
+            cursor: pointer;
+        }
+        .section-content {
+            display: none; /* Hide content by default */
+            padding-top: 10px;
+        }
+        p {
+            color: white; /* Text color for paragraphs */
+        }
+        a.back {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a.back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Navigation</h2>
+            <a href="about_our_nation.html">About Our Nation</a>
+            <a href="culture_and_traditions.html">Culture & Traditions</a>
+            <a href="index.html">Back to Main Page</a>
+        </div>
+        <div class="content">
+            <h1>Government & Leadership</h1>
+            <p>The government of The People's Republic of Austria and Slovenia operates as a democracy, led by a President and a Prime Minister.</p>
+            
+            <div class="section">
+                <h2 class="section-title" onclick="toggleContent(this)">President</h2>
+                <div class="section-content">
+                    <p>The President serves as the Commander of the Armed Forces and oversees external politics.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title" onclick="toggleContent(this)">Prime Minister</h2>
+                <div class="section-content">
+                    <p>The Prime Minister has control over domestic affairs and manages the daily operations of the government.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title" onclick="toggleContent(this)">Parliament</h2>
+                <div class="section-content">
+                    <p>The Parliament consists of 200 members, with 100 representatives from Austria and 100 from Slovenia.</p>
+                </div>
+            </div>
+
+            <p><a href="index.html" class="back">Back to Main Page</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(element) {
+            const content = element.nextElementSibling;
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block"; // Show content
+            } else {
+                content.style.display = "none"; // Hide content
+            }
+        }
+    </script>
+</body>
+</html>
