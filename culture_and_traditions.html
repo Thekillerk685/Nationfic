@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture & Traditions - The People's Republic of Austria and Slovenia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0f29, #1a237e);
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            display: flex;
+        }
+        .sidebar {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .sidebar a {
+            color: #ffcc00;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            flex: 3;
+        }
+        h1, h2 {
+            color: #ffcc00; /* Headings color */
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s;
+            text-align: left;
+        }
+        .section-title {
+            cursor: pointer;
+        }
+        .section-content {
+            display: none; /* Hide content by default */
+            padding-top: 10px;
+        }
+        p {
+            color: white; /* Text color for paragraphs */
+        }
+        a.back {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a.back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Navigation</h2>
+            <a href="about_our_nation.html">About Our Nation</a>
+            <a href="government_and_leadership.html">Government & Leadership</a>
+            <a href="index.html">Back to Main Page</a>
+        </div>
+        <div class="content">
+            <h1>Culture & Traditions</h1>
+            <p>The culture and traditions of The People's Republic of Austria and Slovenia are rich and diverse, reflecting the unique heritage of both nations.</p>
+            
+            <div class="section">
+                <h2 class="section-title" onclick="toggleContent(this)">Austrian Culture and Traditions</h2>
+                <div class="section-content">
+                    <p><!-- Content about Austrian culture and traditions goes here --></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title" onclick="toggleContent(this)">Slovenian Culture and Traditions</h2>
+                <div class="section-content">
+                    <p><!-- Content about Slovenian culture and traditions goes here --></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title" onclick="toggleContent(this)">Mixed Traditions and Culture</h2>
+                <div class="section-content">
+                    <p><!-- Content about mixed traditions and culture goes here --></p>
+                </div>
+            </div>
+
+            <p><a href="index.html" class="back">Back to Main Page</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(element) {
+            const content = element.nextElementSibling;
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block"; // Show content
+            } else {
+                content.style.display = "none"; // Hide content
+            }
+        }
+    </script>
+</body>
+</html>
